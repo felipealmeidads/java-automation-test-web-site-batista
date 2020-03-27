@@ -4,11 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.
-		WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.com.application.name.mobile.interfaces.AccountCredentialsUsers;
@@ -36,6 +32,7 @@ public class BaseTest {
 	protected static WebDriverWait shortWait;
 	protected static AccountCredentialsUsers credentialsUsers;
 	protected static boolean initialized;
+	protected static Alert alert;
 
 	public static Evidence evidence;
 
@@ -58,6 +55,14 @@ public class BaseTest {
 
 	public void initializeEvidence() {
 		BaseTest.evidence = new Evidence(evidenceList);
+	}
+
+	/**
+	 * Confirmação de Caixas de Alerta do google
+	 */
+	protected void confirmaAlertDialog() {
+		alert = webDriver.switchTo().alert();
+		alert.accept();
 	}
 
 	/**

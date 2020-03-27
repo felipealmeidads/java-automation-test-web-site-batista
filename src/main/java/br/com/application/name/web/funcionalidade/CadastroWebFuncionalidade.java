@@ -14,9 +14,14 @@ public class CadastroWebFuncionalidade extends BaseTest {
 
     public void preencheFormulario(){
         wait.until(ExpectedConditions.visibilityOf(this.cadastroWebPage.getInputNome()));
-        this.cadastroWebPage.getInputNome().sendKeys("Marcos");
-        this.cadastroWebPage.getInputSobrenome().sendKeys("nBarbosa");
+        this.cadastroWebPage.getInputNome().sendKeys("AAAAAA");
+        this.cadastroWebPage.getInputSobrenome().sendKeys("AAAAAA");
         this.cadastroWebPage.getInputEmail().sendKeys("teste@teste.cm.br");
+        this.cadastroWebPage.getInputEndereco().sendKeys("Rua Maria Joaquina");
+        this.cadastroWebPage.getInputUniversidade().sendKeys("FATEC");
+        this.cadastroWebPage.getInputProfissao().sendKeys("FullEstag");
+        this.cadastroWebPage.getInputGenero().sendKeys("Masculino");
+        this.cadastroWebPage.getInputIdade().sendKeys("20");
         this.cadastroWebPage.getBtnCriar().click();
     }
 }

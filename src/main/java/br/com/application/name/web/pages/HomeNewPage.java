@@ -18,6 +18,9 @@ public class HomeNewPage {
     @FindBy(xpath = "//a[@href='/users/new']")
     private WebElement linkCriarUsuarios;
 
+    @FindBy(xpath = "//a[@href='/users']")
+    private WebElement linkListaUsuarios;
+
 
     public WebElement getLinkFormularios() {
         return linkFormularios;
@@ -25,5 +28,9 @@ public class HomeNewPage {
 
     public WebElement getLinkCriarUsuarios() {
         return linkCriarUsuarios;
+    }
+
+    public WebElement getLinkListaUsuarios() {
+        return linkListaUsuarios;
     }
 }

@@ -18,4 +18,10 @@ public class HomeNewFuncionalidade extends BaseTest {
         this.homeNewPage.getLinkCriarUsuarios().click();
     }
 
+    public void acessaListaUsuarios(){
+        this.homeNewPage.getLinkFormularios().click();
+        wait.until(ExpectedConditions.elementToBeClickable(this.homeNewPage.getLinkListaUsuarios()));
+        this.homeNewPage.getLinkListaUsuarios().click();
+    }
+
 }

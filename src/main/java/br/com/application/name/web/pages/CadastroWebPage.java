@@ -22,6 +22,21 @@ public class CadastroWebPage {
     @FindBy(id = "user_email")
     private WebElement inputEmail;
 
+    @FindBy(id = "user_address")
+    private WebElement inputEndereco;
+
+    @FindBy(id = "user_university")
+    private WebElement inputUniversidade;
+
+    @FindBy(id = "user_profile")
+    private WebElement inputProfissao;
+
+    @FindBy(id = "user_gender")
+    private WebElement inputGenero;
+
+    @FindBy(id = "user_age")
+    private WebElement inputIdade;
+
     @FindBy(xpath = "//input[@name='commit']")
     private WebElement btnCriar;
 
@@ -40,5 +55,25 @@ public class CadastroWebPage {
 
     public WebElement getBtnCriar() {
         return btnCriar;
+    }
+
+    public WebElement getInputEndereco() {
+        return inputEndereco;
+    }
+
+    public WebElement getInputUniversidade() {
+        return inputUniversidade;
+    }
+
+    public WebElement getInputProfissao() {
+        return inputProfissao;
+    }
+
+    public WebElement getInputGenero() {
+        return inputGenero;
+    }
+
+    public WebElement getInputIdade() {
+        return inputIdade;
     }
 }
