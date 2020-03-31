@@ -34,6 +34,7 @@ public class InitTestStepWeb {
     public void queAcessoAPaginaDoSite() {
         this.homeNewFuncionalidade.acessaCriarUsuarios();
     }
+
     @Dado("^que acesso a pagina lista de usuarios$")
     public void queAcessoAPaginaDoSite2() {
         this.homeNewFuncionalidade.acessaListaUsuarios();

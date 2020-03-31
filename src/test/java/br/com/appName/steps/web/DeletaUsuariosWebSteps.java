@@ -1,10 +1,8 @@
 package br.com.appName.steps.web;
 
 import br.com.application.name.web.funcionalidade.DeletaUsuariosWebFuncionalidade;
-import cucumber.api.PendingException;
-import cucumber.api.java.pt.Dado;
+import cucumber.api.java.pt.E;
 import cucumber.api.java.pt.Entao;
-import cucumber.api.java.pt.Então;
 import org.junit.Assert;
 
 public class DeletaUsuariosWebSteps {
@@ -15,9 +13,16 @@ public class DeletaUsuariosWebSteps {
         this.deletaUsuariosWebFuncionalidade = new DeletaUsuariosWebFuncionalidade();
     }
 
-    @Dado("^confirmo a caixa de alerta$")
-    public void confirmoACaixaDeAlerta() {
-        this.deletaUsuariosWebFuncionalidade.deletaUsuario();
+    @E("^localizo o usuario que eu quero apagar$")
+    public void localizoOUsuarioQueEuQueroApagar() throws InterruptedException {
+        this.deletaUsuariosWebFuncionalidade.proximaPagina();
+    }
+
+    @E("^confirmo a caixa de alerta$")
+    public void confirmoACaixaDeAlerta() throws InterruptedException {
+        if (deletaUsuariosWebFuncionalidade.proximaPagina()) {
+            this.deletaUsuariosWebFuncionalidade.deletaUsuario();
+        }
     }
 
     @Entao("^visualizo na tela \"([^\"]*)\"$")

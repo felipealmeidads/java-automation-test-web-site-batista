@@ -33,8 +33,19 @@ public class BaseTest {
 	protected static AccountCredentialsUsers credentialsUsers;
 	protected static boolean initialized;
 	protected static Alert alert;
+	protected static String nome = "";
 
 	public static Evidence evidence;
+
+	/**
+	* VARIAVEL DINAMICA PARA NOME DE USUÁRIO PARA O SITE DE QA
+	 */
+	public static String getNome() {
+		return nome;
+	}
+	public static void setNome(String nome) {
+		BaseTest.nome = nome;
+	}
 
 	public void setCtName(String ctName) {
 		evidence.setCtName(ctName);
